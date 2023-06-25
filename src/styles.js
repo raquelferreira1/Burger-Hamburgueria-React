@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-background-color: #0A0A10;
+background-color: #842222;
 display: flex;
 align-items: center;
 flex-direction: column;
@@ -14,16 +14,12 @@ margin-top: 40px;
 `;
 
 export const ContainerItens = styled.div`
-padding: 50px 36px;
 display: flex;
 flex-direction: column;
 margin-top: 40px;
-gap: 25px;
-
-box-shadow: 0 8px 20px 0 #F77309;
-backdrop-filter: blur( 4px );
--webkit-backdrop-filter: blur( 4px );
+padding: 50px 36px;
 border-radius: 10px;
+background-color: #000000;
 `;
 
 export const H1 = styled.h1`
