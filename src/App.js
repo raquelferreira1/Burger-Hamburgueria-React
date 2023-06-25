@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import LogoBurger from './assets/logo-burger.png';
 
-function App() {
+import { Container, Image, ContainerItens, H1, InputLabel, Input, Button } from './styles';
+
+const App = () => {
+  const pedido = 'Qual é o pedido?'
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <ContainerItens>
+        <Image alt='logo-burger' src={LogoBurger} />
+
+        <H1>{pedido}</H1>
+
+        <InputLabel>Pedido</InputLabel>
+        <Input placeholder='Ex: 1 X-Salada' />
+
+        <InputLabel>Nome do Cliente</InputLabel>
+        <Input placeholder='Nome e sobrenome' />
+
+        <Button>Novo Pedido</Button>
+      </ContainerItens>
+
+    </Container>
+  )
+
 }
 
-export default App;
+export default App
