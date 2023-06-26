@@ -6,7 +6,7 @@ display: flex;
 align-items: center;
 flex-direction: column;
 gap: 40px;
-height: 100vh;
+height: 100%;
 `;
 
 export const Image = styled.img`
@@ -16,7 +16,7 @@ margin-top: 40px;
 export const ContainerItens = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 40px;
+margin-top: 30px;
 padding: 50px 36px;
 border-radius: 10px;
 background-color: #000000;
@@ -77,5 +77,33 @@ opacity: 0.8;
 
 &:active{
     opacity: 0.5;
+}
+`;
+
+export const User = styled.li`
+display: flex;
+justify-content: space-around;
+align-items: center;
+margin-top: 20px;
+background: rgba(255, 255, 255, 0.25);
+box-shadow: 0px 4px 4px #00000040;
+border-radius: 14px;
+width: 342px;
+height: 58px;
+border: none;
+outline: none;
+
+p {
+color: #ffffff;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 28px;
+}
+
+button {
+background: none;
+border: none;
+cursor: pointer;
 }
 `;

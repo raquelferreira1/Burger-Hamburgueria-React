@@ -1,7 +1,8 @@
 import React from 'react';
 import LogoBurger from './assets/logo-burger.png';
+import Trash from './assets/trash.svg';
 
-import { Container, Image, ContainerItens, H1, InputLabel, Input, Button } from './styles';
+import { Container, Image, ContainerItens, H1, InputLabel, Input, Button, User } from './styles';
 
 const App = () => {
   const users = [
@@ -26,9 +27,10 @@ const App = () => {
 
         <ul>
           {users.map((user) => (
-            <li key={user.id}>
-              {user.pedido} - {user.nome}
-            </li>
+            <User key={user.id}>
+              <p> {user.pedido} </p> <p> {user.nome} </p>
+              <button><img src={Trash} alt='lixeira' /></button>
+            </User>
           ))}
         </ul>
 
