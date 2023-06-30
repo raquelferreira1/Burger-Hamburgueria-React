@@ -85,11 +85,14 @@ display: flex;
 justify-content: space-around;
 align-items: center;
 margin-top: 20px;
+
 background: rgba(255, 255, 255, 0.25);
 box-shadow: 0px 4px 4px #00000040;
 border-radius: 14px;
+
 width: 342px;
 height: 58px;
+
 border: none;
 outline: none;
 
