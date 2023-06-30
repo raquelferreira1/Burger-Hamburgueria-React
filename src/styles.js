@@ -16,8 +16,8 @@ margin-top: 40px;
 export const ContainerItens = styled.div`
 display: flex;
 flex-direction: column;
-margin-top: 30px;
-padding: 50px 36px;
+margin-top: 10px;
+padding: 65px 30px;
 border-radius: 10px;
 background-color: #000000;
 `;
