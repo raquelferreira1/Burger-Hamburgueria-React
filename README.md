@@ -1,6 +1,6 @@
 #  Hamburgueria  :hamburger:
 
-## 📝 Sobre
+## 📝 Sobre 
 
 Página onde é registrado pedidos de clientes em uma hamburgueria, com listagem de pedidos e opção para deletar.
 
