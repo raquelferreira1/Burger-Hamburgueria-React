@@ -7,16 +7,16 @@ Página onde é registrado pedidos de clientes em uma hamburgueria, com listagem
 ## 🚀 Tecnologias Utilizadas
 
 -   [React.JS](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+
 -   [Styled Components](https://developer.mozilla.org/en-US/docs/Web/API/Web_components)
+
 -   [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+<br>
 
 > Para ver o projeto on-line clique **[AQUI](https://projeto-burger-fotu6gz43-raquelferreira1.vercel.app/)**
 
 <br><br>
 
-
-
-# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
