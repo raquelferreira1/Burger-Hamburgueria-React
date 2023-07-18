@@ -1,26 +1,31 @@
 import React, { useState, useRef } from 'react';
-import LogoBurger from './assets/logo-burger.png';
-import Trash from './assets/trash.svg';
+import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
 
-import { Container, Image, ContainerItens, H1, InputLabel, Input, Button, User } from './styles';
+import LogoBurger from '../../assets/logo-burger.png';
+import axios from 'axios'
+
+import { Container, Image, InputLabel, Input } from './styles';
+
+import H1 from '../../components/Title';
+import Button from '../../components/Button';
+import ContainerItens from '../../components/ContainerItens';
 
 const App = () => {
   const [users, setUsers] = useState([]);
+  const history = useHistory();
+
   const inputOrder = useRef();
   const inputName = useRef();
 
-  const addNewUser = () => {
-    setUsers([...users, {
-      id: Math.random(),
+  async function addNewUser() {
+    const { data: newUser } = await axios.post("http://localhost:3001/orders", {
       order: inputOrder.current.value,
       name: inputName.current.value,
-    }
-    ]);
-  }
+    });
 
-  const deleteUser = (userId) => {
-    const newUsers = users.filter((user) => user.id !== userId)
-    setUsers(newUsers);
+    setUsers([...users, newUser]);
+
+    history.push("/orders");
   }
 
   return (
@@ -37,15 +42,6 @@ const App = () => {
         <Input ref={inputName} placeholder='Nome e sobrenome' />
 
         <Button onClick={addNewUser}>Novo Pedido</Button>
-
-        <ul>
-          {users.map((user) => (
-            <User key={user.id}>
-              <p> {user.order} </p> <p> {user.name} </p>
-              <button onClick={() => deleteUser(user.id)}><img src={Trash} alt='lixeira' /></button>
-            </User>
-          ))}
-        </ul>
 
       </ContainerItens>
 
